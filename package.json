@@ -1,0 +1,19 @@
+{
+  "name": "ts-seed-package",
+  "version": "0.0.1",
+  "description": "Seed package for typescript node packages.",
+  "main": "/lib/app.js",
+  "scripts": {
+    "declaration": "tsc -d ./lib/app.ts",
+    "setup": "npm i && npm run tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch"
+  },
+  "author": "Drew McCombs",
+  "license": "MIT",
+  "readme": "README.md",
+  "dependencies": {
+    "typescript": "^2.0.3"
+  }
+}
