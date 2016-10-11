@@ -1,1 +1,3 @@
-console.log("ts-seed-package");
+export function getMessage(message: string) {
+    return `Your message: ${message}`;
+}

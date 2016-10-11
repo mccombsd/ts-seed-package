@@ -7,10 +7,14 @@
     "url": "https://github.com/mccombsd/ts-seed-package"
   },
   "scripts": {
+    "coverage": "istanbul cover node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=./tests/jasmine.json",
     "declaration": "tsc -d ./lib/app.ts",
+    "jasmine": "jasmine JASMINE_CONFIG_PATH=./tests/jasmine.json",
     "git": "git push -u origin master",
+    "remap": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/remap-coverage.json",
+    "remap-report": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/html -t html",
     "setup": "npm i && npm run tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run jasmine",
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
     "watch": "npm run tsc:w"
@@ -20,5 +24,13 @@
   "readme": "README.md",
   "dependencies": {
     "typescript": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.35",
+    "@types/node": "^6.0.45",
+    "concurrently": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.5.2",
+    "remap-istanbul": "^0.6.4"
   }
 }
