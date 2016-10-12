@@ -9,8 +9,9 @@
   "scripts": {
     "coverage": "istanbul cover node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=./tests/jasmine.json",
     "declaration": "tsc -d ./lib/app.ts",
-    "jasmine": "jasmine JASMINE_CONFIG_PATH=./tests/jasmine.json",
     "git": "git push -u origin master",
+    "jasmine": "jasmine JASMINE_CONFIG_PATH=./tests/jasmine.json",
+    "lite": "lite-server -c ./lite.json",
     "remap": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/remap-coverage.json",
     "remap-report": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/html -t html",
     "setup": "npm i && npm run tsc",
@@ -23,9 +24,11 @@
   "license": "MIT",
   "readme": "README.md",
   "dependencies": {
+    "core-js": "^2.4.1",
     "typescript": "^2.0.3"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.34",
     "@types/jasmine": "^2.5.35",
     "@types/node": "^6.0.45",
     "concurrently": "^3.1.0",

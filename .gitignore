@@ -1,4 +1,6 @@
 coverage
 node_modules
 lib/**/*.js
+tasks/**/*.js
 **/*.map
+**/*.spec.js
